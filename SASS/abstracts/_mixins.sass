@@ -1,0 +1,10 @@
+@mixin clearfix
+   &::after
+      content: ""
+      display: table
+      clear: both
+
+@mixin BG-clip
+   background: linear-gradient(90deg, #C3956A 3.65%, $Brown-color-dark 100%)
+   -webkit-background-clip: text
+   color: transparent
