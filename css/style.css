@@ -246,6 +246,36 @@ body {
   color: transparent;
 }
 
+.card-tour {
+  height: 50rem;
+  perspective: 150rem;
+  position: relative;
+}
+.card-tour__side {
+  height: 50rem;
+  transition: all 1s;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  backface-visibility: hidden;
+  box-shadow: 0px 15px 40px 0px rgba(0, 0, 0, 0.15), 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  border-radius: 3px;
+}
+.card-tour__side_front {
+  background-color: yellow;
+}
+.card-tour__side_back {
+  background: linear-gradient(135deg, #C3956A 3.65%, #A14F03 100%);
+  transform: rotateY(180deg);
+}
+.card-tour:hover .card-tour__side_front {
+  transform: rotateY(180deg);
+}
+.card-tour:hover .card-tour__side_back {
+  transform: rotateY(360deg);
+}
+
 .header {
   position: relative;
   height: 95vh;
@@ -322,4 +352,8 @@ body {
   background: linear-gradient(90deg, rgba(186, 133, 84, 0.7) 0%, rgba(0, 0, 0, 0.7) 70%), url(../img/pexels-julia-volk.jpg) center/cover no-repeat;
   -webkit-clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 85%);
           clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 85%);
+}
+
+.section-tour {
+  padding: 8rem 0;
 }
