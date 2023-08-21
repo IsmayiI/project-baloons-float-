@@ -29,9 +29,15 @@
    &__img
       background-blend-mode: hard-light
       height: 24.5rem
-      background: $Brown-color-light url(../img/cards/card-img-2.jpg) center / cover no-repeat
       clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 83%)
       margin-bottom: 5rem
+      &_1
+         background: $Brown-color-light url(../img/cards/card-img-2.jpg) center / cover no-repeat
+      &_2
+         background: $Brown-color-light url(../img/cards/card-img-1.jpg) center / cover no-repeat
+      &_3
+         background: $Brown-color-light url(../img/cards/card-img-3.jpg) center / cover no-repeat
+
    &__title
       color: $color-white
       text-align: right
@@ -63,3 +69,38 @@
 
             &:not(:last-child)
                margin-bottom: 2rem
+
+   &__backside-box
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+
+      color: $color-white
+      letter-spacing: .2rem
+      text-transform: uppercase
+      text-align: center
+      &>p
+         margin-bottom: 8.7rem
+
+   &__text
+      font-weight: 300
+
+   &__price
+      font-size: 6rem
+      font-weight: 500
+   &__btn
+      &:link, &:visited
+         color: $color-grey
+         font-size: 2rem
+         font-weight: 600
+         letter-spacing: .5rem
+         text-transform: uppercase
+
+         padding: 1.5rem 4rem
+         background-color: $color-white
+         border-radius: 5rem
+         transition: all .3s
+      &:hover
+         transform: translateY(-.4rem)
+         box-shadow: $box-shadow
